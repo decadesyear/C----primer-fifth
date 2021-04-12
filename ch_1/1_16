@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int sum = 0, a = 0;
+	cout << "please input your numbers:" << endl;
+	while(cin >> a)//遇到文件结束符时跳出
+		sum += a;
+	cout << sum << endl;
+	return 0;
+}
+
+//window下，输入文件结束符是敲Ctrl+Z，然后按Enter键
