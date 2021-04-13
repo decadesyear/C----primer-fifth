@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a=0,b=10,tmp=0;
+	if (a < b) {
+		tmp = a;
+		a = b;
+		b = tmp;
+	}
+	while (a > b)
+	{
+		cout << a << endl;
+		a--;
+	}
+}
