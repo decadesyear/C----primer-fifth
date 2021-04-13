@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int currval = 0, val = 0;
+	if (cin >> currval)
+	{
+		int count = 1;
+		while (cin >> val)
+		{
+			if (currval == val  )
+			{
+				++count;
+			}
+
+			else
+			{
+				cout << currval << "occurs" << count << "times" << endl;
+				currval = val;
+				count = 1;
+			}
+		}
+		cout << currval << "occurs" << count << "times" << endl;
+	}
+	return 0;
+}
+
+
+//运行显示只能计数连续输入的那种，随机输入只显示1次
