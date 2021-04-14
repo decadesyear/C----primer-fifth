@@ -1,0 +1,7 @@
+Use int for integer arithmetic. short is usually too small and, in practice,long often has the same size as int. If your data values are larger than the minimum guaranteed size of an int, then use long long. (In a word: short < int < long < long long)
+
+
+Use an unsigned type when you know that the values cannot be negative. (In a word: no negative, unsigned.)
+
+
+Use double for floating-point computations; float usually does not have enough precision, and the cost of double-precision calculations versus single-precision is negligible. In fact, on some machines, double-precision operations are faster than single. The precision offered by long double usually is unnecessary and often entails considerable run-time cost. (In a word: float < double < long double)
