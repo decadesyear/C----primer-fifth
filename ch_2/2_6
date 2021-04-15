@@ -1,0 +1,7 @@
+The first line's integer is decimal.
+The second line:
+
+
+int month = 09 is invalid, cause octal don't have digit 9.
+
+day is octal.
