@@ -1,0 +1,13 @@
+a、(输入时才定义是不合法的)不正确，需在cin之前定义input_value
+int input_value=0;
+std::cin>>input_value;
+
+b、error: type 'double' cannot be narrowed to 'int' in initializer list.
+double i = { 3.14 };
+
+c、wage未定义if declared 'wage' before, it's right. Otherwise, error would be happened: error: use of undeclared identifier 'wage'
+当一次定义了两个或多个变量时，可以用先定义的变量值去初始化后定义的其他变量；
+double wage;
+double salary = wage = 9999.99;
+
+d、i会被强制类型转换成3
