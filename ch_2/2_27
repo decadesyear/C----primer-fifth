@@ -1,0 +1,16 @@
+a:引用r的赋值对象必须是一个对象，所以不合法
+
+b:合法，将p2设为一个常量指针，初始化为i2对象的地址
+
+c:合法，将i设为常量，r设置为常量的引用（注意const   int   &r = 0  是正确的，但是int  &r = 0是不正确的）
+
+d:合法，p3为指向常量的常量指针，初始值为i2的地址
+
+e:合法，p1为指向常量的指针，初始值为i2的地址
+
+f:使用不合法  // illegal, r2 is a reference that cannot be const
+
+g:合法，正常的赋值。
+————————————————
+版权声明：本文为CSDN博主「MISAYAONE」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/misayaaaaa/article/details/53228035
