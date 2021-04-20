@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+struct Sales_data {
+	std::string bookNo;
+	unsigned units_sold = 0;
+	double revenue = 0.0;
+};
+int main() {
+	Sales_data book1,book2,book;
+	double price1,price2;
+	std::cin >> book1.bookNo >> book1.units_sold >> price1  ;
+	std::cin >> book2.bookNo >> book2.units_sold >> price2  ;
+
+	book.revenue = book1.units_sold*price1+book2.units_sold*price2;
+	std::cout << book1.bookNo << " " << book1.units_sold+ book2.units_sold << " " << book.revenue << " " << book.revenue/(book1.units_sold + book2.units_sold);
+	return 0;
+}
