@@ -1,0 +1,5 @@
+int a = 3, b = 4;
+decltype(a) c = a;                // c是int类型
+decltype((b)) d = a;              // d是a的引用
+++c;                              // c的值是4
+++d;                              // d的值是4
