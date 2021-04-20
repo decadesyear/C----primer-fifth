@@ -1,0 +1,10 @@
+区别1：auto会忽略顶层const，decltype返回的类型包括顶层const和引用在内
+
+区别2：decltype的结果类型与表达式形式密切相关。
+
+例子1：int i = 1; auto j = i; //decltype(j) = i;    这种指定的类型相同
+
+例子2：const int &i = 1; auto j = i;  //此时j是int &型。 decltype(i)  j = i; j是const int&  （区别1）
+————————————————
+版权声明：本文为CSDN博主「猪二哥」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/weixin_42254068/article/details/106471376
