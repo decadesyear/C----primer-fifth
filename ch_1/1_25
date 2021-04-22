@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	Sales_item total;
-	if (cin >> total) 
+	if (cin >> total)
 	{
 		Sales_item trans;
 		while (cin >> trans)
@@ -14,12 +14,13 @@ int main()
 			{
 				total += trans;
 			}
-			else 
+			else
 			{
 				cout << total << endl;
 				total = trans;
 			}
 		}
+		cout << total << endl;//while语句终止时，total中保存着最后一个ISBN数据，需要将这个也打印出来
 	}
 	else
 	{
