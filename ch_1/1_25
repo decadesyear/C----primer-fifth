@@ -10,7 +10,7 @@ int main()
 		Sales_item trans;
 		while (cin >> trans)
 		{
-			if (total.isbn() = trans.isbn())
+			if (total.isbn == trans.isbn)
 			{
 				total += trans;
 			}
