@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+struct Sale_data
+{
+	std::string bookNo;
+	unsigned units_sold = 0;
+	double revenue = 0;
+};
+
+int main()
+{
+	Sale_data total;
+	double totalPrice;
+	if (cin >> total.bookNo>>total.units_sold>>totalPrice)
+	{
+		total.revenue = total.units_sold*totalPrice;
+		Sale_data trans;
+		double transPrice;
+		while (cin >> trans.bookNo>>trans.units_sold>>transPrice)
+		{
+			trans.revenue = trans.units_sold*transPrice;
+			if (total.bookNo == trans.bookNo)
+			{
+				total.units_sold += trans.units_sold;
+				total.revenue += total.revenue;
+			}
+			else
+			{
+				cout << total.bookNo<<" "<<total.units_sold<<" "<<total.revenue << endl;
+				total.bookNo = trans.bookNo;
+				total.units_sold = trans.units_sold;
+				total.revenue = trans.revenue;
+			}
+		}
+		cout << total.bookNo<<" "<<total.units_sold<<" "<<total.revenue << endl;//while语句终止时，total中保存着最后一个ISBN数据，需要将这个也打印出来
+	}
+	else
+	{
+		cout << "NO DATA?" << endl;
+		return -1;
+	}
+	return 0;
+}
