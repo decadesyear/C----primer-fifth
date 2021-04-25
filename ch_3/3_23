@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int a;
+	vector<int> ivec;
+	while (cin >> a)
+	{
+		ivec.push_back(a);
+	}
+	for (auto it = ivec.begin(); it != ivec.end(); ++it)
+	{
+		*it *= 2;
+		cout << *it<< " ";
+	}
+	return 0;
+}
