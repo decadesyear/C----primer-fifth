@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string str;
+	vector<string> svec;
+	while (cin >> str)
+	{
+		svec.push_back(str);
+		for (auto &str : svec)
+		{
+			for (auto &c : str)
+			{
+				c = toupper(c);
+			}
+		}
+	}
+	for (decltype(svec.size()) i = 0; i != svec.size(); ++i)
+	{
+		cout << svec[i] << endl;
+	}
+	return 0;
+}
