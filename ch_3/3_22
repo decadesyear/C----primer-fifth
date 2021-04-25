@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string str;
+	vector<string> text;
+	while (getline(cin,str))
+	{
+		text.push_back(str);
+		for (auto it = text.begin(); it != text.cend() && !it->empty(); ++it)
+		{
+			for (auto it1 = it->begin(); it1 != it->end(); ++it1)
+				*it1 = toupper(*it1);
+			cout << *it << endl;
+		}
+	}
+	
+	return 0;
+}
