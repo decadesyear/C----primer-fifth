@@ -26,7 +26,7 @@ int main()
 
 
 	cout << "v2 的元素个数是：" << v2.size() << endl;
-	if (v1.size() > 0)
+	if (v2.size() > 0)
 	{
 		cout << "v2的元素是：" << endl;
 		for (auto e : v2)
