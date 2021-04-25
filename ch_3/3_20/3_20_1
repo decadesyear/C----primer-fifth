@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int a;
+	vector<int> ivec;
+	while (cin >> a)
+	{
+		ivec.push_back(a);
+	}
+	for (decltype(ivec.size()) index = 0; index != ivec.size(); ++index)
+	{
+		if (index % 2 == 0)
+		{
+			cout << ivec[index] + ivec[index + 1] << endl;
+		}
+	}
+	return 0;
+}
