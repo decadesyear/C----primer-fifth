@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int a;
+	vector<int> ivec;
+	while (cin >> a)
+	{
+		ivec.push_back(a);
+	}
+	for (auto beg=ivec.begin(),end=ivec.end()-1; beg< end; ++beg,--end)
+	{
+		cout << *beg + *end << " ";
+	}
+	return 0;
+}
