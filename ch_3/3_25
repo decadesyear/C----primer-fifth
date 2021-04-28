@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+	int score;
+	vector<int> ivec(10,0);
+	auto it = ivec.begin();
+	while (cin >> score)
+	{
+		//ivec.push_back(score);
+		++*(it + score / 10);
+	}
+	for (auto it = ivec.begin(); it != ivec.end(); ++it)
+	{
+		cout << *it << " ";
+	}
+	return 0;
+}
